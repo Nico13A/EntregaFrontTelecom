@@ -1,0 +1,170 @@
+@import "./colores.css";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* ESTILO GENERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(../assets/img/kiwihug-iiXyEE-HVXQ-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aside {
+    background-color: #fff;
+    position: fixed;
+    min-width: 290px;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.aside header {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header__img {
+    width: 80%;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.navbar a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    color: var(--color-secondary);
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-tertiary-dark);
+
+    /* Animación de derecha a izquierda. */
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* CONTENIDO */
+.main {
+    padding: 20px;
+    margin-bottom: 110px;
+    position: relative;
+    margin-left: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__title {
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: var(--color-secondary-dark);
+    font-size: 40px;
+}
+
+.section__cafes, .section__jugos, .section__batidos {
+    margin: 40px 0;
+}
+
+.section__cafes h3, h4, p {
+    margin-top: 20px;
+}
+
+
+.section__cafes h3{
+    color: var(--color-yellow);
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+}
+
+.section__cafes h4 {
+    color: var(--color-tertiary-dark);
+}
+
+.section__cafes p {
+    color: var(--color-light);
+}
+
+.section__cafes-list {
+    color: var(--color-light);
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.section__cafes-list li {
+    padding: 5px 0;
+}
+/*
+.section__jugos {
+    margin-top: 0;
+}
+*/
+/*
+.section__jugos h3 {
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-tertiary-dark);
+    margin-bottom: 20px;
+}
+
+.section__jugos h5 {
+    padding: 10px;
+}
+*/
+
+@media (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .aside {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        position: static;
+        margin: 0 auto;
+    }
+
+}

@@ -1,0 +1,200 @@
+@import "./colores.css";
+
+/* ESTILO GENERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+/* BARRA DEL COSTADO */
+
+.aside {
+    flex: 20%;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__img {
+    object-fit: contain;
+    width: 80%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.navbar a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    color: var(--color-secondary);
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-tertiary-dark);
+
+    /* Animación de derecha a izquierda. */
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* CONTENIDO */
+.main {
+    background-image: url(../assets/img/tyler-nix-J4wx-1_5n2M-unsplash.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.main__title {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.main__title h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+}
+
+.main__title h6 {
+    text-align: center;
+}
+
+
+.main__buttons button{
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 0;
+    background-color: var(--color-tertiary);
+}
+
+.main__buttons button:hover {
+    background-color: var(--color-tertiary-dark);
+    cursor: pointer;
+}
+
+.main__buttons button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-light);
+}
+
+/* PIE DE PAGINA */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-secondary-dark);
+    flex: 100%;
+    color: var(--color-light);
+    padding: 20px;
+}
+
+.footer__ubication {
+    font-size: 12px;
+    align-self: center;
+    text-align: center;
+}
+
+.footer__ubication h4 {
+    margin: 10px 0;
+}
+
+.footer__redes {
+    font-size: 20px;
+    align-self: center;
+}
+
+.footer__redes a {
+    padding: 20px;
+}
+
+.footer__redes a i {
+    color: var(--color-light);
+    transition: transform 0.4s;
+}
+
+.footer__redes a i:hover {
+    transform: scale(2);
+}
+
+@media screen and (max-width: 832px) {
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .header__img {
+        height: 160px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+}
+
+
+@media screen and (max-width: 490px) {
+    footer {
+        flex-direction: column;
+    }
+    .footer__ubication {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 352px) {
+    .main__buttons {
+        text-align: center;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas y cafés</title>
+    <link rel="stylesheet" href="../css/formulario.css">
+    <script src="https://kit.fontawesome.com/7b6132a987.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="aside">
+        <header class="header">
+            <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo" class="header__img"></a>
+        </header>
+
+        <nav class="navbar">
+            <a href="./bebidas.html">Bebidas y cafés</a>
+            <a href="./comidas.html">Comidas</a>
+            <a href="#">Reservar lugar</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="main">
+
+        <div class="container">
+            <header class="header-form">
+                <h2 class="text-center main__title">Contacto</h2>
+                <p id="description" class="description text-center">Por cualquier consulta escribinos!</p>
+            </header>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre y apellido <span class="form__span">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre y apellido" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail <span class="form__span">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Escribe tu mail" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Escribe tu teléfono">
+                </div>
+                <div class="form-group">
+                    <p>Motivo de consulta</p>
+                    <select name="reason" id="dropdown" class="form-control">
+                        <option value="" disabled selected class="first-option">Selecciona una opción</option>   
+                        <option value="sales">Ventas</option>
+                        <option value="human-resources">Recursos humanos</option>
+                        <option value="customer-support">Atención al cliente</option>
+                        <option value="bookings">Reservas</option>
+                        <option value="quality-claims">Reclamos de calidad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Mensaje</p>
+                    <textarea name="comment" id="comment" class="input-textarea" placeholder="Deja aquí tu mensaje..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">Enviar</button>
+                </div>
+
+                <div class="form-group">
+                    <p><span class="form__span">*</span> Los campos son obligatorios</p>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+
+
+</body>
+</html>
