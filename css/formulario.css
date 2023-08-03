@@ -202,6 +202,16 @@ select.form-control:hover {
     color: var(--color-yellow);
 }
 
+@media screen and (max-width: 832px) {
+
+    .header__img {
+        height: 160px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     body {
